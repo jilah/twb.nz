@@ -9,38 +9,26 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/buttons.css">
   <style>
-  .visuallyhidden { 
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; 
-}
+  body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+  footer {
+  width: 100%;
+  margin: auto auto 0 auto;
+  }
 
-input {
-  padding: 0.5em 0.75em;
-  border: 1px solid #ccc;
-}
-
-.file {
-  [type=file] {
-    @extend .visuallyhidden;
+  /*Custom file upload*/
+  .custom-file-label{
+  padding-right: 85px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   }
-  
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 0.5em 0.75em;
-  border-radius: 0.3em;
-  background: #eee;
-  
-  &:hover {
-    background: #fff;
+  .custom-file-label.rounded-0::after{
+  border-radius: 0;
   }
-  
-  &:active {
-    background: #ddd;
-  }
-}
   </style>
 </head>
 <body>
