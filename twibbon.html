@@ -32,19 +32,9 @@
 .github svg{
   margin-right:10px;
 }
-    text-overflow: ellipsis;
-  }
-  
-  input {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    cursor: pointer;
-  }
+
+input[type="file"] {
+  display: none;
 }
   </style>
 </head>
@@ -62,12 +52,7 @@
 <p><img id="avatar" src=""/></p>
 
 <p>
-<!--<input class="name" type="file" accept="image/*" onchange="loadFile(event)"/>-->
-<div class="fancyupload">
-  <i class="fas fa-file-upload"></i>
-  <span class="label">Select a file or drop here...</span>
-  <input type="file" name="my-file" onchange="loadFile(event)" hidden/>
-</>
+<input class="name" type="file" accept="image/*" onchange="loadFile(event)" value="Upload"/>
 </p>
 
 
