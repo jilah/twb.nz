@@ -35,27 +35,16 @@
 
 /* ALL RELEVANT CSS BELOW */
 
-#file-upload {
-  display: none;
-}
-.custom-file-upload {
-  display: inline-block;
-  cursor: pointer;
-  color: #01768b;
-  font-size: 14px;
-  font-family: proxima,helvetica,clean,sans-serif;
-  &:hover,
-  &:focus {
-    color: #015462;
-  }
-  .fa-upload { 
-    margin-right: 4px;
-  }
-  .upload-text {
-    text-decoration: underline;
-  }
+input[type="file"] {
+    display: none;
 }
 
+.custom-file-upload {
+    border: 1px solid red;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -72,11 +61,10 @@
 <p><img id="avatar" src=""/></p>
 
 <p>
-<label for="file-upload" class="custom-file-upload"> <!-- this is the wrapper -->
-<i class="fas fa-upload"></i> <!-- this is the icon -->
-<span class="upload-text">Custom Upload</span> <!-- this is the text -->
-</label>
+<label class="custom-file-upload">
 <input type="file" accept="image/*" onchange="loadFile(event)"/>
+Unggah Gambar
+</label>
 </p>
 
 
