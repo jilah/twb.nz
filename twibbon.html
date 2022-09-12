@@ -72,12 +72,11 @@
 <p><img id="avatar" src=""/></p>
 
 <p>
-<label for="file-upload" class="custom-file-upload">
-    Attach Files <br>
-  <span id="selectedname" class"inlinetext"> .doc, .jpg, .pdf, upto 2MB</span>
-  <i class="fa fa-link uploadicon"></i>
+<label for="file-upload" class="custom-file-upload"> <!-- this is the wrapper -->
+<i class="fas fa-upload"></i> <!-- this is the icon -->
+<span class="upload-text">Custom Upload</span> <!-- this is the text -->
 </label>
-<input class="name" type="file" accept="image/*" onchange="loadFile(event)" value="Upload"/>
+<input class="name" type="file" accept="image/*" onchange="loadFile(event)"/>
 </p>
 
 
