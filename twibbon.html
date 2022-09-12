@@ -16,22 +16,15 @@
 
 <p><strong><a href="/">TWIBBON.PAGES.DEV</a></strong> Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
 
-<h2 id="kelola-bingkai">Kelola Bingkai</h2>
+<h2 id="please-select-a-file">Please select a file...</h1></h2>
 
-<blockquote>
-  <p>blockquotes</p>
-</blockquote>
+<input type="file" onchange="uploadFile(event)" />
+    
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">time</span>
-<span class="k">print</span> <span class="p">(</span><span class="s">"Biscuit"</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="licence-and-author-information">Lisensi dan Informasi Penulis</h2>
-
-<p>Twibbon dan kode sebelumnya dimana Twibbon berasal didistribusikan dengan <a href="https://github.com/jilah/twb.nz/blob/main/LICENSE">Lisensi MIT</a>.</p>
-
+<!--
 <button class="button-3" role="button">Button 3</button>
 <button class="button-4" role="button">Button 4</button>
+-->
 
   </div>
 <div id="footer">
@@ -40,6 +33,12 @@
 </center>
 </div>
 
-<script src="#"></script>
-</body>
+<script src="js/upload.js"></script>
+  <script>
+      // DOM Elements
+      const d            = document
+      const h1           = d.getElementsByTagName("h1")[0]
+      const uploadButton = d.getElementsByTagName("input")[0]
+    </script>
+  </body>
 </html>
