@@ -12,14 +12,14 @@
   .custom-file-input {
   padding: 5px;
   color: #999;
-  border: 1px solid #000;
+  border: 1px solid #444;
   vertical-align: middle;
   }
   .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
   }
   .custom-file-input::before {
-  content: 'Browse';
+  content: 'Browse...';
   color: #666;
   display: inline-block;
   background: #fff;
@@ -59,17 +59,16 @@
 
 <p>
 Unggah Gambar:
-<br>
+</p>
 <input class="custom-file-input" type="file" accept="image/*" onchange="loadFile(event)"/>
 <img style="display: none" id="avatar" src=""/>
-</p>
+
 
 <p>
 Unggah Bingkai:
-<br>
+</p>
 <input class="custom-file-input" type='file' accept="image/*" onchange="loadTemplate(event)"/>
 <img style="display: none" id="bingkai" src=""/>
-</p>
 
 <p><canvas id="canvas"></canvas></p>
 
