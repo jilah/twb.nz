@@ -32,48 +32,35 @@
   </style>
 </head>
 <body>
-<div class="container">
-
-<p><img src="/biscuit/assets/biscuit.png" alt="Banner" /></p>
-
-<p><strong><a href="/">TWIBBON.PAGES.DEV</a></strong> Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
-
-<h2 id="please-select-a-file">Please select a file...</h1></h2>
-
-
-<p>
-Unggah Gambar:
-</p>
-<label class="file">
-  Upload
-  <input type="file" accept="image/*" onchange="loadFile(event)" class="upload">
-</label>
-<!--<input class="custom-file-input" type="file" accept="image/*" onchange="loadFile(event)"/>-->
-<img style="display: none" id="avatar" src=""/>
-
-
-<p>
-Unggah Bingkai:
-</p>
-<input class="custom-file-input" type='file' accept="image/*" onchange="loadTemplate(event)"/>
-<img style="display: none" id="bingkai" src=""/>
-
-<p><canvas id="canvas"></canvas></p>
-
-
-<button class="button-3" role="button" onclick="gen()">Pratinjau</button>
-<button class="button-4" role="button">Button 4</button>
-
-
-</div>
-
-<div id="footer">
-<center>
-<small> This site uses a simple and beautiful Jekyll theme: <a href="/">Biscuit</a></small>
-</center>
+<div id="contentBox">
+  <div class="container">
+  	<div class="row">
+      <div class="col-md-4 mt-4">
+        <input type="text" name="" class="form-control rounded-0" placeholder="Enter Name">
+        <div class="input-group my-2">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" data-imageload="#filename">
+            <label class="custom-file-label rounded-0" for="inputGroupFile01" id="filename"><span class="text-secondary">Select an image to upload</span></label>
+          </div>
+        </div>  
+        <button type="button" class="btn btn-info rounded-0 my-2 mb-2">Submit</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <p id="cont">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button type="button" class="btn btn-warning rounded-0 my-2 mb-5" onclick="cont('#cont')">Add Content</button>
+        <button type="button" class="btn btn-danger rounded-0 my-2 mb-5" onclick="removecont()">Remove Content</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="js/app.js"></script>
-
+<script src="js/apk.js"></script>
   </body>
 </html>
