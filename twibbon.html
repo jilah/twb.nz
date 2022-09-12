@@ -26,7 +26,7 @@
   border: 1px solid #999;
   border-radius: 3px;
   margin: -3px 0 -3px 0;
-  padding: 5px 20px;
+  padding: 7px 20px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -58,19 +58,13 @@
 <!--<p><img id="avatar" src=""/></p>-->
 
 <p>
-<input class="custom-file-input" type="file" accept="image/*" onchange="loadFile(event)" value="Gambar"/>
+<input class="custom-file-input" type="file" accept="image/*" onchange="loadFile(event)"/>
 <img id="avatar" src=""/>
 </p>
 
 <p>
-<fieldset>
-  <legend>Custom input file</legend>
-  <label class='__lk-fileInput'>
-    <span>Unggah Bingkai...</span>
-    <input id="bingkai" type='file' accept="image/*" onchange="loadBingkai()"/>
-    <img id="bingkai" src=""/>
-  </label> 
-</fieldset>
+<input type='file' accept="image/*" onchange="loadTemplate(event)"/>
+<img id="bingkai" src=""/>
 </p>
 
 <p><canvas id="canvas"></canvas></p>
