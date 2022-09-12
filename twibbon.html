@@ -32,20 +32,6 @@
 .github svg{
   margin-right:10px;
 }
-
-/* ALL RELEVANT CSS BELOW */
-
-.custom_input {
-  width: 100%;
-  height: 35px;
-  font-size: 15px;
-  padding: 5px 10px;
-  color: #555;
-  border-radius: 5px;
-  border: 1px solid #bbb;
-  outline: none;
-}
-  
   </style>
 </head>
 <body>
@@ -62,7 +48,7 @@
 <!--<p><img id="avatar" src=""/></p>-->
 
 <p>
-<input class='custom_input' type="file" accept="image/*" onchange="loadFile(event)" value="Gambar"/>
+<input type="file" accept="image/*" onchange="loadFile(event)" value="Gambar"/>
 <img id="avatar" src=""/>
 </p>
 
