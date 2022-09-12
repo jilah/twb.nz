@@ -62,7 +62,12 @@
 <p><img id="avatar" src=""/></p>
 
 <p>
-<input class="name" type="file" accept="image/*" onchange="loadFile(event)" value="Upload"/>
+<!--<input class="name" type="file" accept="image/*" onchange="loadFile(event)"/>-->
+<div class="fancyupload">
+  <i class="fas fa-file-upload"></i>
+  <span class="label">Select a file or drop here...</span>
+  <input type="file" name="my-file" onchange="loadFile(event)" />
+</>
 </p>
 
 
@@ -82,7 +87,7 @@
 
 <script src="js/app.js"></script>
 <script>
-function handleChange(e) {
+function loadFile(e) {
   const label = document.querySelector('.label'),
         node = e.target.parentNode;
   if (e.target.files) {
