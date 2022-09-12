@@ -55,16 +55,20 @@
 <p><strong><a href="/">TWIBBON.PAGES.DEV</a></strong> Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
 
 <h2 id="please-select-a-file">Please select a file...</h1></h2>
-<!--<p><img id="avatar" src=""/></p>-->
+
 
 <p>
+Unggah Gambar:
+<br>
 <input class="custom-file-input" type="file" accept="image/*" onchange="loadFile(event)"/>
-<img id="avatar" src=""/>
+<img style="display: none" id="avatar" src=""/>
 </p>
 
 <p>
+Unggah Bingkai:
+<br>
 <input class="custom-file-input" type='file' accept="image/*" onchange="loadTemplate(event)"/>
-<img id="bingkai" src=""/>
+<img style="display: none" id="bingkai" src=""/>
 </p>
 
 <p><canvas id="canvas"></canvas></p>
