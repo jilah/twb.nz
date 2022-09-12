@@ -68,6 +68,11 @@ var loadFile = function(event) {
         download(canvas, 'mer.cyclic.app.png');
     };
 
-$('.custom-upload input[type=file]').change(function(){
-    $(this).next().find('input').val($(this).val());
-});
+ $(document).ready(function() {                                 $('#upload').change(function() {                                var filename = $(this).val();
+   var lastIndex = filename.lastIndexOf("\\");
+   if (lastIndex >= 0) {
+    filename = filename.substring(lastIndex + 1);
+  }
+   $('#filename').text(filename);
+    });
+   });
