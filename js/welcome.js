@@ -1,14 +1,27 @@
 // Add your code here
 
-const modal = document.getElementById("modal");
-const btnSkip = document.getElementById("modal-skip");
+// Get production API keys from Upload.io
+const upload = new Upload({ apiKey: "free" });
 
-window.onload = (event) => {
-  setTimeout(() => modal.classList.add("modal-visible"), 1000);
-};
-
-//tap outside overlay or on cancel button to close window
-
-btnSkip.addEventListener("click", () => {
-  modal.classList.remove("modal-visible");
+// Create input handler (see HTML).
+const uploadFile = upload.createFileInputHandler({
+  onBegin: () => {
+    uploadButton.remove()
+  },
+  
+  onProgress: ({ progress }) => {
+    h1.innerHTML = `File uploading... ${progress}%`;
+  },
+  
+  onUploaded: ({ fileUrl, fileId }) => {
+    h1.innerHTML = `
+        File uploaded:
+        <br/>
+        <br/>
+        <a href="${fileUrl}" target="_blank">${fileUrl}</a>`
+  },
+  
+  onError: (error) => {
+    h1.innerHTML = `Please try another file:<br/><br/>${error.message}`
+  }
 });
