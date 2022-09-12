@@ -14,24 +14,6 @@ var header = '<span class="over"></span>'+
       '</header>';
 
 // Include Footer By Javascript
-var footer = '<footer class="text-center text-white bg-primary"><p class="py-4 m-0">&copy; 2018 - Twibbon Generator</p></footer>'
-
-$('#contentBox').before(header);
-$('#contentBox').after(footer);
-
-
-
-// Upload Image and Render Upload File Name
-$(document).on('change', '[data-imageload]', function(e){
-  $($(this).data('imageload')).html(e.target.files[0].name);
-});
-
-// Add More Content Functionality
-function cont(id){
-  $(id).after('<p class="addedcontent">'+$(id).html()+'</p>');
-}
-
-// Remove Added Content 
-function removecont(){
-  $('.addedcontent').remove();
-}
+var footer = '<footer class="footer" role="contentinfo">'+
+'<small> 2019 © <a href="/" >Ferry Ayunda</a> </small>'+
+</footer>'
