@@ -36,6 +36,13 @@
 input[type="file"] {
   display: none;
 }
+.custom-file-upload {
+    border: 0px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: #360e88;
+}
   </style>
 </head>
 <body>
@@ -52,6 +59,11 @@ input[type="file"] {
 <p><img id="avatar" src=""/></p>
 
 <p>
+<label for="file-upload" class="custom-file-upload">
+    Attach Files <br>
+  <span id="selectedname" class"inlinetext"> .doc, .jpg, .pdf, upto 2MB</span>
+  <i class="fa fa-link uploadicon"></i>
+</label>
 <input class="name" type="file" accept="image/*" onchange="loadFile(event)" value="Upload"/>
 </p>
 
