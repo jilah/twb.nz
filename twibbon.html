@@ -33,16 +33,29 @@
   margin-right:10px;
 }
 
-input[type="file"] {
+/* ALL RELEVANT CSS BELOW */
+
+#file-upload {
   display: none;
 }
 .custom-file-upload {
-    border: 0px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-    color: #360e88;
+  display: inline-block;
+  cursor: pointer;
+  color: #01768b;
+  font-size: 14px;
+  font-family: proxima,helvetica,clean,sans-serif;
+  &:hover,
+  &:focus {
+    color: #015462;
+  }
+  .fa-upload { 
+    margin-right: 4px;
+  }
+  .upload-text {
+    text-decoration: underline;
+  }
 }
+
   </style>
 </head>
 <body>
