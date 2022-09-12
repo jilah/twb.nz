@@ -1,7 +1,6 @@
-
 // Include Header By Javascript
 var header = '<nav class="navbar navbar-expand-md navbar-dark bg-primary"><header class="container">'+
-  '<a class="navbar-brand" href="#">Include <small>(Header/Footer</small>)</a>'+
+  '<a class="navbar-brand" href="#">TWIBBON <small>GENERATOR</small></a>'+
   '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">'+
     '<span class="navbar-toggler-icon"></span>'+
   '</button>'+
@@ -35,7 +34,7 @@ var header = '<nav class="navbar navbar-expand-md navbar-dark bg-primary"><heade
 '</header></nav>';
 
 // Include Footer By Javascript
-var footer = '<footer class="text-center text-white bg-primary"><p class="py-4 m-0">&copy; 2018 - This is footer section</p></footer>'
+var footer = '<footer class="text-center text-white bg-primary"><p class="py-4 m-0">&copy; 2018 - Twibbon Generator</p></footer>'
 
 $('#contentBox').before(header);
 $('#contentBox').after(footer);
