@@ -67,3 +67,7 @@ var loadFile = function(event) {
         dwn.onclick = function(){
         download(canvas, 'mer.cyclic.app.png');
     };
+
+$('.custom-upload input[type=file]').change(function(){
+    $(this).next().find('input').val($(this).val());
+});
