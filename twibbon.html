@@ -63,5 +63,12 @@
 
 <script src="js/app.js"></script>
 <script src="js/apk.js"></script>
+<script>
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+</script>
   </body>
 </html>
