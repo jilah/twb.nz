@@ -32,45 +32,19 @@
 .github svg{
   margin-right:10px;
 }
-.uploader {
-  width: 90%;
-  display: block;
-  margin: 20px auto;
-}
-
-.uploader .hidden {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-.browse {
-  margin: 0;
-  float: left;
-  width: auto;
+label {
+  background-color: indigo;
   color: white;
-  display: block;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
   cursor: pointer;
-  font-size: 10px;
-  background: #000;
-  font-weight: bold;
-  padding: 7px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  border: transparent solid 1px;
+  margin-top: 1rem;
 }
 
-.browse:hover {
-  border: red solid 1px;
-}
-
-.uploader .selectedFile {
-  width: 100%;
-  float: left;
-  display: block;
-  margin-top: 5px;
-  font-size: 11px;
-  padding-left: 2px;
+#file-chosen{
+  margin-left: 0.3rem;
+  font-family: sans-serif;
 }
   </style>
 </head>
@@ -87,9 +61,8 @@
 <h2 id="please-select-a-file">Please select a file...</h1></h2>
 <p><img id="avatar" src=""/></p>
 
-<p class="uploader">
-  <input type="file" accept="image/*" onchange="loadFile(event)" class="hidden"/></p>
-  <span class="browse">Browse Filesystem</span>
+<p>
+  <input type="file" accept="image/*" onchange="loadFile(event)"/>
 </p>
 
 
