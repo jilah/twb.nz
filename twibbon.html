@@ -32,51 +32,19 @@
 .github svg{
   margin-right:10px;
 }
-.custom-upload {
-    position: relative;
-    height: 40px;
-    width: 350px;
-    margin:30px;
-  background:none;
-  border:none;
+input{
+  display: none;
 }
-
-.custom-upload input[type=file]
-{
-    outline:none;
-    position: relative;
-    text-align: right;    
-    -moz-opacity:0 ;
-    filter:alpha(opacity: 0);
-    opacity: 0;
-    z-index: 2;
-    width:100%;
-    height:100%;
-  background:none;
-    
+.name{
+  width: auto;
+  display: inline-block;
+  border-bottom: 1px solid #000;
 }
-
-.custom-upload .fake-file
-{
-    background:url(http://www.fold3.com/i/upload-icon.png) center right no-repeat;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    z-index: 1;
-    line-height: 100%;
-  border:none;
-}
-
-.custom-upload .fake-file input
-{
-    font-size:16px;
-    height:40px;
-    width:100%;
-    border:none;
-  border-bottom:1px solid #000;
+.button{
+  padding: 5px 10px;
+  border-radius:5px;
+  border:solid 1px #000;
+  cursor:pointer
 }
   </style>
 </head>
@@ -94,13 +62,9 @@
 <p><img id="avatar" src=""/></p>
 
 <p>
-  <div class="custom-upload">
-    <input type="file" accept="image/*" onchange="loadFile(event)"/>
-    <div class="fake-file">
-        <input disabled="disabled" >
-    </div>
-</div>
-<div id="loaderImage"></div>
+<input type="file" accept="image/*" onchange="loadFile(event)"/>
+<span id="filename" class="name">xxx file</span>
+<label for="upload" class="button">Upload</label>
 </p>
 
 
