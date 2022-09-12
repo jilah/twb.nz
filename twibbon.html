@@ -32,6 +32,46 @@
 .github svg{
   margin-right:10px;
 }
+.uploader {
+  width: 90%;
+  display: block;
+  margin: 20px auto;
+}
+
+.uploader .hidden {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.browse {
+  margin: 0;
+  float: left;
+  width: auto;
+  color: white;
+  display: block;
+  cursor: pointer;
+  font-size: 10px;
+  background: #000;
+  font-weight: bold;
+  padding: 7px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border: transparent solid 1px;
+}
+
+.browse:hover {
+  border: red solid 1px;
+}
+
+.uploader .selectedFile {
+  width: 100%;
+  float: left;
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  padding-left: 2px;
+}
   </style>
 </head>
 <body>
@@ -43,25 +83,10 @@
 
 <h2 id="please-select-a-file">Please select a file...</h1></h2>
 
-<p>Copyright © 2022 &lt;copyright holders&gt;</p>
-
-    <p>Permission is hereby granted, free of charge, to any person obtaining a copy
-      of this software and associated documentation files (the “Software”), to deal
-      in the Software without restriction, including without limitation the rights
-      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-      copies of the Software, and to permit persons to whom the Software is
-      furnished to do so, subject to the following conditions:</p>
-
-    <p>The above copyright notice and this permission notice shall be included in
-      all copies or substantial portions of the Software.</p>
-
-    <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-      THE SOFTWARE.</p>
+<label class="uploader">
+  <input type="file" name="fileupload" id="fileupload" class="hidden"/>
+  <span class="browse">Browse Filesystem</span>
+</label>
 
 <a class="github" target="_blank" href="https://github.com/jilah">
   <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision" style=""><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"></path></svg>
