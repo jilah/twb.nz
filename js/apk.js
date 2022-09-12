@@ -1,61 +1,58 @@
-function alertAvatar() {
-  var avatar = document.getElementById('avatar');
-  document.getElementById('fileName').innerHTML =  avatar.value; }
 
-function alertBingkai() {
-  var bingkai = document.getElementById('bingkai');
-  document.getElementById('fileName').innerHTML =  bingkai.value; }
+// Include Header By Javascript
+var header = '<nav class="navbar navbar-expand-md navbar-dark bg-primary"><header class="container">'+
+  '<a class="navbar-brand" href="#">Include <small>(Header/Footer</small>)</a>'+
+  '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">'+
+    '<span class="navbar-toggler-icon"></span>'+
+  '</button>'+
+  '<div class="collapse navbar-collapse" id="navbarNav">'+
+    '<ul class="navbar-nav">'+
+      '<li class="nav-item">'+
+        '<a class="nav-link" href="#">Home</a>'+
+      '</li>'+
+      '<li class="nav-item">'+
+        '<a class="nav-link" href="#">About Us</a>'+
+      '</li>'+
+      '<li class="nav-item">'+
+        '<a class="nav-link" href="#">Contact Us</a>'+
+      '</li>'+
+      '<li class="nav-item dropdown">'+
+        '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>'+
+        '<div class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">'+
+          '<a class="dropdown-item" href="#">Action</a>'+
+          '<a class="dropdown-item" href="#">Action #2</a>'+
+          '<a class="dropdown-item" href="#">Action #3</a>'+
+          '<a class="dropdown-item" href="#">Action #4</a>'+
+          '<div class="dropdown-divider"></div>'+
+          '<a class="dropdown-item" href="#">Something else here</a>'+
+        '</div>'+
+      '</li>'+
+      '<li class="nav-item">'+
+        '<a class="nav-link" href="#">Pricing</a>'+
+      '</li>'+
+    '</ul>'+
+  '</div>'+
+'</header></nav>';
+
+// Include Footer By Javascript
+var footer = '<footer class="text-center text-white bg-primary"><p class="py-4 m-0">&copy; 2018 - This is footer section</p></footer>'
+
+$('#contentBox').before(header);
+$('#contentBox').after(footer);
 
 
 
-function gen() {
-      alert("Click OK to continue...");
-      // Mensetting Variabel
-        var img1 = document.getElementById('avatar');
-        console.log(img1);
-        var img2 = document.getElementById('bingkai');
-        console.log(img2);
-        var canvas = document.getElementById("canvas");
-        var context = canvas.getContext("2d");
-        var width = img2.width;
-        var height = img2.height;
-        canvas.width = width;
-        canvas.height = height;
-        // Fungsi untuk men-draw gambar
-        context.drawImage(img1, 0, 1, width, height);
-        var image1 = context.getImageData(0, 0, width, height);
-        var imageData1 = image1.data;
-        context.drawImage(img2, 0, 0, width, height);
-        var image2 = context.getImageData(0, 0, width, height);
-        var imageData2 = image2.data;
-  }
+// Upload Image and Render Upload File Name
+$(document).on('change', '[data-imageload]', function(e){
+  $($(this).data('imageload')).html(e.target.files[0].name);
+});
 
-  function download(canvas, filename) {
-    /// create an "off-screen" anchor tag
-    var lnk = document.createElement('a'), e;
+// Add More Content Functionality
+function cont(id){
+  $(id).after('<p class="addedcontent">'+$(id).html()+'</p>');
+}
 
-    /// the key here is to set the download attribute of the a tag
-    lnk.download = filename;
-
-    /// convert canvas content to data-uri for link. When download
-    /// attribute is set the content pointed to by link will be
-    /// pushed as "download" in HTML5 capable browsers
-    lnk.href = canvas.toDataURL("image/png;base64");
-
-    /// create a "fake" click-event to trigger the download
-        if (document.createEvent) {
-            e = document.createEvent("MouseEvents");
-            e.initMouseEvent("click", true, true, window,
-                            0, 0, 0, 0, 0, false, false, false,
-                            false, 0, null);
-
-            lnk.dispatchEvent(e);
-        } else if (lnk.fireEvent) {
-            lnk.fireEvent("onclick");
-        }
-    }
-
-    var dwn = document.getElementById('btndownload');
-        dwn.onclick = function(){
-        download(canvas, 'twibbon.png');
-    };
+// Remove Added Content 
+function removecont(){
+  $('.addedcontent').remove();
+}
