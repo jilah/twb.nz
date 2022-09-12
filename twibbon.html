@@ -8,6 +8,7 @@
   <title>Biscuit Theme for Jekyll</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/welcome.css">
 
 </head>
 <body>
@@ -25,25 +26,7 @@
 
 <p>Tambahkan tampilan yang disesuaikan ke profil Facebook hanya dalam beberapa langkah. Buat bingkai di Frame Studio untuk teman dan pengikut Anda menggunakan karya seni original Anda sendiri atau pilih dari template kami.</p>
 
-<h3 id="files">Cara Membuat Bingkai</h3>
 
-<ul>
-  <li>Akses <a href="/">Twibbon Generator</a>.</li>
-  <li>Pilih file dari komputer Anda.</li>
-  <li>Di bagian Unggah Gambar untuk, pilih Foto Profil.</li>
-  <li>Unggah karya seni Anda dengan latar belakang transparan sebagai File .PNG terpisah, dengan ukuran kurang dari 1 MB.</li>
-  <li>Tentukan ukuran dan sesuaikan karya seni Anda, lalu klik Berikutnya.</li>
-  <li>Klik 'Unduh' untuk memgunduh Twibbon.</li>
-  <li> Atau klik 'Hapus' untuk menghapus hasil Twibbon.</li>
-</ul>
-
-<h2 id="example-tag-usage">Example tag usage</h2>
-
-<h2 id="header-1">Header 1</h2>
-<h3 id="header-2">Header 2</h3>
-<h4 id="header-3">Header 3</h4>
-<p><strong>bold</strong>
-<em>italic</em></p>
 
 <blockquote>
   <p>blockquotes</p>
@@ -67,5 +50,17 @@
 </center>
 </div>
 
+<div class="modal" id="modal">
+<div class="modal__container">
+<h1>Selamat Datang</h1>
+<p>Selamat datang di Twibbon Generator! Mulailah dengan melihat tutorial langkah demi langkah kami atau masuk ke tampilan beranda.</p>
+<div class="modal__buttons">
+<button class="btn-secondary" id="modal-skip">Ok</button>
+<button class="btn-primary">Tutorial</button>
+</div>
+</div>
+</div>
+
+<script src="js/welcome.js"></script>
 </body>
 </html>
