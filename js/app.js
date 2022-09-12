@@ -67,12 +67,3 @@ var loadFile = function(event) {
         dwn.onclick = function(){
         download(canvas, 'mer.cyclic.app.png');
     };
-
- $(document).ready(function() {                                 $('#upload').change(function() {                                var filename = $(this).val();
-   var lastIndex = filename.lastIndexOf("\\");
-   if (lastIndex >= 0) {
-    filename = filename.substring(lastIndex + 1);
-  }
-   $('#filename').text(filename);
-    });
-   });
