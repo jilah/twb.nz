@@ -41,8 +41,8 @@
         <input type="text" name="" class="form-control rounded-0" placeholder="Enter Name">
         <div class="input-group my-2">
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="inputGroupFile01" data-imageload="#filename">
-            <label class="custom-file-label rounded-0" for="inputGroupFile01" id="filename"><span class="text-secondary">Select an image to upload</span></label>
+            <input type="file" class="custom-file-input" accept="image/*" onchange="loadFile(event)">
+            <label class="custom-file-label rounded-0" for="inputGroupFile01"><span class="text-secondary">Unggah Gambar</span></label>
           </div>
         </div>  
         <button type="button" class="btn btn-info rounded-0 my-2 mb-2">Submit</button>
