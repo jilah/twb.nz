@@ -92,7 +92,7 @@ fieldset{
   <legend>Custom input file</legend>
   <label class='__lk-fileInput'>
     <span id="fileName">Unggah Gambar...</span>
-    <input type="file" accept="image/*" onchange="loadFile(event)"/>
+    <input type="file" accept="image/*" onchange="alertAvatar(event)"/>
     <img id="avatar" src=""/>
   </label> 
 </fieldset>
@@ -124,9 +124,7 @@ fieldset{
 </center>
 </div>
 
-<script src="js/app.js"></script>
-<script>
-document.getElementById('fileName').innerHTML =  avatar.value; }
-</script>
+<script src="js/apk.js"></script>
+
   </body>
 </html>
