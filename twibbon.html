@@ -62,7 +62,11 @@ label {
 <p><img id="avatar" src=""/></p>
 
 <p>
-  <input type="file" accept="image/*" onchange="loadFile(event)"/>
+  <input type="file" accept="image/*" onchange="loadFile(event)" hidden/>
+  <!-- our custom upload button -->
+  <label for="actual-btn">Choose File</label>
+  <!-- name of file chosen -->
+  <span id="file-chosen">No file chosen</span>
 </p>
 
 
