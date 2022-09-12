@@ -84,10 +84,14 @@ fieldset{
 <p><img id="avatar" src=""/></p>
 
 <p>
-<label class="custom-file-upload">
-<input type="file" accept="image/*" onchange="loadFile(event)"/>
-Unggah Gambar
-</label>
+<fieldset>
+  <legend>Custom input file</legend>
+  
+  <label class='__lk-fileInput'>
+    <span data-default='Choose file'>Choose file</span>
+    <input type="file" accept="image/*" onchange="loadFile(event)"/>
+  </label> 
+</fieldset>
 </p>
 
 
