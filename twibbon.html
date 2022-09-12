@@ -46,32 +46,17 @@ fieldset{
 
 
 
-.__lk-fileInput{
-  cursor: pointer;
-  input{
-    display: none;
-  }
-  span{
-    color: #fff;
-    margin: 0 0 10px;
-    padding: 5px 10px;
-    text-decoration: none;
-    background: #418edb;
-    border-radius: 2px;
-    font: normal 14px/1.412 Helvetica;
-    &:hover{
-      background: #2683E1;
-    }
-    &.withFile{
-      &:after{
-        content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTA5OEU0M0REOUIwMTFFMzg4Q0VDNDEwMTU1QkU0MUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTA5OEU0M0VEOUIwMTFFMzg4Q0VDNDEwMTU1QkU0MUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMDk4RTQzQkQ5QjAxMUUzODhDRUM0MTAxNTVCRTQxQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMDk4RTQzQ0Q5QjAxMUUzODhDRUM0MTAxNTVCRTQxQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PolX3bIAAADWSURBVHjadNHNCkFBFMDxSYq9UsoCC4/gZqFEiXLZSKy8nJ2Pja6FB1A8i/KRuEjXfzSXY3DqV3Nnzpx7TqOCIMhjgAkSUJYkRugjG1VKFeGiBgdz9RmOObvgWWEWvOOMlqiu1745u2OsN9No42YOLqigbNbhXgMp2WsdW5NwE8kbVMM8e8ASrlaLjsyJWAPG1HfEP77+DOiLlo6m3VdLOXRFK3qOAoo4iAIdZPQFT/R8ktXQFH/VMVXmlfVL7qzkkIs9hujpl16G42D9Y+gVFvD0+iHAAMR9gu9PEii4AAAAAElFTkSuQmCC');
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 8px;
-      }
-    }
-  }
+.custom_input {
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
+  padding: 5px 10px;
+  color: #555;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  outline: none;
 }
+  
   </style>
 </head>
 <body>
@@ -90,11 +75,8 @@ fieldset{
 <p>
 <fieldset>
   <legend>Custom input file</legend>
-  <label class='__lk-fileInput'>
-    <span id="fileName">Unggah Gambar...</span>
-    <input id="avatar" type="file" accept="image/*" onchange="alertAvatar()"/>
+      <input class='custom_input' type="file" accept="image/*" onchange="loadFile(event)" value="Gambar"/>
     <img id="avatar" src=""/>
-  </label> 
 </fieldset>
 </p>
 
@@ -124,7 +106,7 @@ fieldset{
 </center>
 </div>
 
-<script src="js/apk.js"></script>
+<script src="js/app.js"></script>
 
   </body>
 </html>
