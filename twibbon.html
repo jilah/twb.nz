@@ -94,11 +94,13 @@
 <p><img id="avatar" src=""/></p>
 
 <p>
-  <input type="file" accept="image/*" onchange="loadFile(event)" hidden/>
-  <!-- our custom upload button -->
-  <label>Choose File</label>
-  <!-- name of file chosen -->
-  <span id="file-chosen">No file chosen</span>
+  <div class="custom-upload">
+    <input type="file" accept="image/*" onchange="loadFile(event)"/>
+    <div class="fake-file">
+        <input disabled="disabled" >
+    </div>
+</div>
+<div id="loaderImage"></div>
 </p>
 
 
