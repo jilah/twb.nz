@@ -1,6 +1,3 @@
-<!-- HTML !-->
-<button class="button-7" role="button">Button 7</button>
-
 /* CSS */
 .button-7 {
   background-color: #0095ff;
@@ -41,9 +38,6 @@
   background-color: #0064bd;
   box-shadow: none;
 }
-
-<!-- HTML !-->
-<button class="button-8" role="button">Button 8</button>
 
 /* CSS */
 .button-8 {
