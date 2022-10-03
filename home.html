@@ -16,6 +16,7 @@
 
 <!-- font -->
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i" rel="stylesheet">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 
@@ -101,7 +102,16 @@
     </div>
 
 <div class="post_content">
-    <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<p>Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
+<p>Silahkan unggah gambar, aplikasi ini akan otomatis menggabungkan unggahan gambar yang Anda pilih.</p>
+<p><input class="form" type="file" id="image_input" name="image_input" multiple></p>
+<p>
+<button class="press press-black press-round press-ghost" onclick="generate()">Submit</button>
+<button class="press press-indigo press-round press-ghost" onclick="download('Thank You!')" id="download" disabled>Unduh</button>
+</p>
+<p><canvas id="canvas"></p>
+    
+<p><a class="Follow" href="https://www.facebook.com/bungferry.wa" target="blank_"></a></p> 
 </div>
 
 <div class="post_comment"></div>
