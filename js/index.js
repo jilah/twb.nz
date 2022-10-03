@@ -1,6 +1,6 @@
 let canvas = document.getElementById('canvas');
 let c = canvas.getContext('2d');
-let filename = "twibbon";
+let filename = "twibbon-by-ferry-ayunda";
 let btnDownload = document.getElementById('download');
 let reader = new FileReader();
 let target = new Image();
