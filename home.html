@@ -1,59 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>Twibbon Generator</title>
+  
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Catbook">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lorem Ipsum | Gray - Single column blog and portfolio Jekyll theme</title>
-<meta name="generator" content="Twibbon Generator v3.7.4" />
-<meta property="og:title" content="Twibbon Generator" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Lorem Ipsum is simply dummy text" />
-<meta property="og:description" content="Lorem Ipsum is simply dummy text" />
-<meta property="og:site_name" content="Twibbon Generator" />
-<meta property="og:type" content="website" />
-<meta property="article:published_time" content="2022-10-01T00:00:00+00:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Twibbon Generator" />
-<meta name="twitter:site" content="@bungferry" /> 
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" href="css/buttons.css" />
-<style type="text/css">
-body{font-family:-apple-system,BlinkMacSystemFont,'avenir next',avenir,Noto Sans,helvetica,'helvetica neue',sans-serif}body{font-size:1rem;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}a,a:visited{color:inherit}a:hover,a:visited:hover{color:dodgerblue}blockquote{background:#f9f9f9;border-left:5px solid black;font-size:120%;margin:2rem 0;padding:1rem}blockquote p{margin:0}blockquote footer{font-size:80%;margin:1rem 0 0 0}dl dt{margin-bottom:0.5rem}dl dd{font-style:italic;margin-bottom:2rem}code,.highlight{background:#edf2f7;overflow:auto}code{word-break:break-all}code{padding:0.1rem 0.3rem}pre{padding:1em}.date{opacity:0.6}html{box-sizing:border-box;margin:0;padding:0}*,*:before,*:after{box-sizing:inherit}body{background-color:#edf2f7;color:#495057}header,main{margin:0 auto;max-width:50rem}main{background:white;border:2px solid #e9ecef;-webkit-box-shadow:0 0.75rem 1.5rem rgba(18,38,63,0.03);box-shadow:0 0.75rem 1.5rem rgba(18,38,63,0.03);padding:2rem 3rem}ul,ol{padding:0;list-style-position:inside}table{border-collapse:collapse;text-align:left;width:100%}table tr{border-bottom:1px solid black}table td{padding:0.5rem}img{width:100%;margin:0.5rem 0}nav ul{list-style:none !important;padding:0;text-align:right}nav ul li{display:inline-block}nav a,nav a:visited{margin:0.5rem;text-decoration:none;font-size:0.875rem;text-transform:uppercase;color:inherit}footer{margin:1rem 0;text-align:center;color:inherit}img,canvas{width:100%;height:auto;}.form{display:block;padding:5px;border:4px solid #f0f0f2;border-radius:5px;color:#333;transition: all 0.3s ease-out;}.form-input:hover{border-radius:8px}.form-input:focus{outline:none;border-radius:8px;border-color:#EBD292;}
-</style>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<link rel="stylesheet" href="css/master.css" media="all">
+
+<!-- favicon -->
+<link rel="shortcut icon"favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i" rel="stylesheet">
 </head>
-<body> 
-<span class="over"></span>
-<header role="banner">
-<nav role="navigation">
-<ul>
-<li><a href="/" >Home</a></li>
-<li><a href="/tags" >Tags</a></li>
-<li><a href="/about" >About</a></li>
-<li><a href="/projects" >Projects</a></li>
-<li><a href="/atom.xml">Feed</a></li>
-</ul>
-</nav>
+<body>
+
+<div class="content">
+<header class="header">
+<div class="header_content">
+<label class="theme_changer">
+<input theme_toggle type="checkbox">
+<div class="button"></div>
+</label>
+<a class="header_circle" href=".">
+<img src="/catbook/assets/img/cat.jpg" alt="catbook">
+</a>
+<span class="header_name">Catbook</span>
+<span class="header_job">a category-centric theme</span>
+<span class="header_mes"></span>
+
+    <nav class="nav">
+      
+      <ul class="nav_list">
+        <li class="nav_item">
+          <a href="/catbook/aboutme.html">about</a>
+        </li>
+      </ul>
+      
+      
+      
+      <ul class="nav_list">
+        <li class="nav_item">
+          <a href="/catbook/categories/dev" id="aa">dev
+            (1)</a>
+        </li>
+      </ul>
+      
+      
+      <ul class="nav_list">
+        <li class="nav_item">
+          <a href="/catbook/categories/writing" id="aa">writing
+            (1)</a>
+        </li>
+      </ul>
+      
+      
+      <ul class="nav_list">
+        <li class="nav_item">
+          <a href="/catbook/categories/travel" id="aa">travel
+            (1)</a>
+        </li>
+      </ul>
+      
+    </nav>
+  </div>
+
 </header>
-<main id="main" role="main">
-<article role="article">
-<h1>Twibbon Generator</h1>
-<p>Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
-<p>Silahkan unggah gambar, aplikasi ini akan otomatis menggabungkan unggahan gambar yang Anda pilih.</p>
-<p><input class="form" type="file" id="image_input" name="image_input" multiple></p>
-<p>
-<button class="press press-black press-round press-ghost" onclick="generate()">Submit</button>
-<button class="press press-indigo press-round press-ghost" onclick="download('Thank You!')" id="download" disabled>Unduh</button>
-</p>
-<p><canvas id="canvas"></canvas></p>
-<p><a class="Follow" href="https://www.facebook.com/bungferry.wa" target="blank_"></a></p>
-<p> Tagged <a class="post" href="/tag/css">#css</a>.</p>
-<hr style="height:2px; border:none; margin: 2rem 0; background-color:#e7e9ee;">
-</article>
-</main>
-<footer class="footer" role="contentinfo">
-<small> Copyright © Twibbon Generator </small>
+
+
+
+    <nav class="mobile_menu">
+
+  <ul class="nav_list">
+    
+    <li class="nav_item">
+      <a href="/catbook/aboutme.html">about</a>
+    </li>
+
+    
+    
+    
+
+    <li class="nav_item">
+      <a href="/catbook/categories/dev" id="aa">dev (1)</a>
+    </li>
+    
+    
+
+    <li class="nav_item">
+      <a href="/catbook/categories/writing" id="aa">writing (1)</a>
+    </li>
+    
+    
+
+    <li class="nav_item">
+      <a href="/catbook/categories/travel" id="aa">travel (1)</a>
+    </li>
+    
+  </ul>
+
+</nav>
+    
+    <main class="main">
+
+    <section class="aboutme">
+    <div class="post_content">
+        <p>
+            If you don't need 'about' page, edit the _config.yml to comment out the code.
+            <br><br>
+            <img src="https://starry99.github.io/catbook/assets/img/cat1.jpg">
+        </p>
+    </div>
+</section>
+
+
+    </main>
+
+  </div>
+
+  <footer class="footer">
+  <div>
+    &copy; 2021 Catbook.
+    Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>.
+    Get this theme
+    <a href="https://github.com/starry99/catbook" target="_blank">here</a>.
+  </div>
 </footer>
-<script src="js/index.js"></script>
+
+  <!-- js from https://codepen.io/MrGrigri/pen/XQmWBv -->
+
+<script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+    const themePreference = () => {
+        const hasLocalStorage = localStorage.getItem('theme');
+        let supports = false;
+        let theme = undefined;
+
+        if (hasLocalStorage === 'light') {
+            theme = 'light';
+        }
+        if (hasLocalStorage === 'dark') {
+            theme = 'dark';
+        }
+
+        if (window.matchMedia(`(prefers_color: dark)`).matches) {
+            theme = hasLocalStorage ? hasLocalStorage : 'dark';
+            supports = true;
+        };
+        if (window.matchMedia(`(prefers_color: light)`).matches) {
+            theme = hasLocalStorage ? hasLocalStorage : 'light';
+            supports = true;
+        };
+        if (window.matchMedia(`(prefers_color: no-preference)`).matches) {
+            theme = hasLocalStorage ? hasLocalStorage : 'none';
+            supports = true;
+        };
+
+        return {
+            supports,
+            theme
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', e => {
+        console.clear();
+
+        const userThemePreference = themePreference();
+        const toggle = document.querySelector('[theme_toggle]');
+        const html = document.documentElement;
+
+        const setTheme = () => {
+            switch (userThemePreference.theme) {
+                case 'dark':
+                    toggle.checked = true;
+                    html.classList.add('dark');
+                    html.classList.remove('light');
+                    break;
+                case 'light':
+                    toggle.checked = false;
+                    html.classList.remove('dark');
+                    html.classList.add('light');
+                    break;
+            }
+        }
+        setTheme();
+        toggle.addEventListener('click', e => {
+            if (toggle.checked) {
+                html.classList.add('dark');
+                html.classList.remove('light');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                localStorage.setItem('theme', 'light');
+            }
+        }, false);
+    }, false);
+// @license-end
+</script>
+
 </body>
 </html>
